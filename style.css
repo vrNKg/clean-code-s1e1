@@ -46,10 +46,12 @@ h3 {
     list-style: none;
 }
 input,
-button{
+button {
     outline: none;
 }
-button {
+.add,
+.edit,
+.delete {
     background: none;
     border: 0px;
     color: #888;
@@ -92,12 +94,14 @@ input[type="text"]:focus {
     display: block;
     margin: 0 0 20px;
 }
-input#new-task {
+#new-task {
     width: 318px;
 }
 
 /* Task list */
-li {
+.no-edit,
+.edit-mode,
+.complete {
     overflow: hidden;
     padding: 20px 0;
     border-bottom: 1px solid #eee;
@@ -112,7 +116,7 @@ li > * {
 input[type="checkbox"] {
     margin: 0 10px;
 }
-li > label {
+.task {
     padding-left: 10px;
     box-sizing: border-box;
     font-size: 18px;
@@ -121,17 +125,17 @@ li > label {
 input[type="text"] {
     width: 226px;
 }
-button.delete img {
+.remove-tag {
     height: 2em;
     transform: rotateZ(45deg);
     transition: transform 200ms ease-in;
 }
-button.delete img:hover {
+.remove-tag:hover {
     transform: rotateZ(0);
 }
 
 /* Completed */
-ul#completed-tasks label {
+#completed-tasks .task {
     text-decoration: line-through;
     color: #888;
 }
@@ -141,11 +145,11 @@ input[type=text] {
     display: none;
 }
 
-li.edit-mode input[type=text] {
+.edit-mode input[type=text] {
     display: inline-block;
     width: 224px;
 }
 
-li.edit-mode label {
+.edit-mode .task {
     display: none;
 }
