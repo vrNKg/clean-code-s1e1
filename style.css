@@ -34,6 +34,9 @@ body {
     display: inline-block;
     flex-grow: 1;
 }
+.add-tasks {
+    display: flex;
+}
 .task-wrapper {
     display: flex;
 }
@@ -135,13 +138,13 @@ input[type="text"] {
 }
 
 /* Completed */
-#completed-tasks .task {
+#completed-tasks label {
     text-decoration: line-through;
     color: #888;
 }
 
 /* Edit Task */
-input[type=text] {
+.no-edit input[type=text] {
     display: none;
 }
 
@@ -150,6 +153,11 @@ input[type=text] {
     width: 224px;
 }
 
-.edit-mode .task {
+.edit-mode label {
     display: none;
 }
+
+.complete input[type=text] {
+    display: none;
+}
+
